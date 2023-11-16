@@ -68,16 +68,17 @@ ul {
     justify-content: space-around;
 }
 
-a.nav-link {
-    color: #fff;
+.buttons {
+    color: #ffffff;
     text-decoration: none;
+    padding: 5px;
     font-size: 1.5rem;
     -webkit-transition: 0.5s;
     transition: 0.5s;
 }
 
-a.nav-link:hover {
-    color: orange;
+.buttons:hover {
+    color: #1a83e6;
 }
 
 .hamburger {

@@ -5,6 +5,7 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Link, NavLink } from "react-router-dom";
 
 export const NavBar = () => {
     return (
@@ -18,9 +19,9 @@ export const NavBar = () => {
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                     >
-                        <Nav.Link href="#action1">Home</Nav.Link>
-                        <Nav.Link href="#action2">Diseños</Nav.Link>
-                        <NavDropdown title="Link" id="navbarScrollingDropdown">
+                        <NavLink className='buttons' to='/'>Home</NavLink>
+                        <NavLink className='buttons' to='/category/Hombre'>Hombre</NavLink>
+                        {/* <NavDropdown className='buttons' title="Linked" id="navbarScrollingDropdown">
                             <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
                             <NavDropdown.Item href="#action4">
                                 Another action
@@ -29,10 +30,10 @@ export const NavBar = () => {
                             <NavDropdown.Item href="#action5">
                                 Something else here
                             </NavDropdown.Item>
-                        </NavDropdown>
-                        <Nav.Link href="#">
-                            Modelos
-                        </Nav.Link>
+                        </NavDropdown> */}
+                        <NavLink className='buttons' to='/category/Mujer'>
+                            Mujer
+                        </NavLink>
                     </Nav>
                     <Form className="d-flex">
                         <Form.Control
@@ -46,7 +47,9 @@ export const NavBar = () => {
                             <i className="fas fa-bell"></i>
                             <span className="badge rounded-pill badge-notification bg-danger">1</span>
                         </a>
-                        <Button variant="outline-dark"> <CartWidget /> </Button>
+                        <Link to='/cart' className="buttons"> 
+                            <CartWidget /> 
+                        </Link>
                     </Form>
 
                 </Navbar.Collapse>
