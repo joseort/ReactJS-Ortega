@@ -1,5 +1,15 @@
+import { useEffect, useState } from "react"
+import { mFetch } from "../../helpers/mFetch"
 
 export const ItemDetailContainer = () => {
+  const [product, setproduct] = useState({})
+
+  useEffect(() => {
+      mFetch('1')
+        .then(res => setproduct(res))
+        .catch(err => console.log('Error: ', err))
+  }, [])
+
   return (
     <div className="row">
         <div className="col-12 text-center mt-5">

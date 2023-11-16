@@ -4,9 +4,7 @@ import { NavBar } from "../NavBar/NavBar"
 export const Home = () => {
     return (
         <div>
-        <NavBar />
-        <ItemListContainer greeting="Wellcome to React" />
-        
+        <ItemListContainer greeting="Wellcome to React HOME" />
         </div>
     )
 }

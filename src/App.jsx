@@ -2,6 +2,7 @@
 //import reactLogo from './assets/react.svg'
 //import viteLogo from '/vite.svg'
 //import './App.css'
+import { BrowserRouter, Routes, Route, Router, Navigate } from 'react-router-dom'
 import {Home} from './components/Home/Home'
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'
 import { NavBar } from './components/NavBar/NavBar';
@@ -14,12 +15,16 @@ import { CartContainer } from './components/CartContainer/CartContainer';
 function App() {
 
   return (
-    <>
+    <BrowserRouter>
       <NavBar />
-      <ItemListContainer greeting="Wellcome to React" />
-      {/* <ItemDetailContainer /> */}
-      <CartContainer />
-    </>
+      <Routes>
+        <Route path='/' element={<Home />}/>
+        <Route path='/detail' element={ <ItemDetailContainer /> }/>
+        <Route path='/cart' element={<CartContainer />}/>
+
+        <Route path='*' element={ <Navigate to='/'/> } />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

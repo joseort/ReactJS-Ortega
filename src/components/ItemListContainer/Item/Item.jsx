@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 export const Item = ({product}) => {
   return (
@@ -9,7 +10,9 @@ export const Item = ({product}) => {
                     <p>Stock: {product.stock}</p>
                 </div>
                 <div className="card-footer">
+                  <Link to='detail'>
                     <button className="btn btn-outline-dark w-100">Detalles</button>
+                  </Link>
                 </div>
             </div>
   )
