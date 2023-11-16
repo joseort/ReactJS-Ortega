@@ -8,14 +8,12 @@ const products = [
 ]
 
 
-export const mFetch = () => {
-    return new Promise((res, rej)=>{
+export const mFetch = (id) => new Promise((res, rej)=>{
         //acciones
         setTimeout(() => {
-            res(products)
+            res(id ? products.find(product => product.id == id) : products)
         }, 1500);
         
         //res("toma lo que me prestaste")
         //rej('No te puedo devolver el dinero')
     })
-}
