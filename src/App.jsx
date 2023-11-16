@@ -7,6 +7,8 @@ import { ItemListContainer } from './components/ItemListContainer/ItemListContai
 import { NavBar } from './components/NavBar/NavBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "bootstrap-icons/font/bootstrap-icons.css";
+import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
+import { CartContainer } from './components/CartContainer/CartContainer';
 
 
 function App() {
@@ -15,6 +17,8 @@ function App() {
     <>
       <NavBar />
       <ItemListContainer greeting="Wellcome to React" />
+      {/* <ItemDetailContainer /> */}
+      <CartContainer />
     </>
   )
 }
